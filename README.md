@@ -43,9 +43,17 @@ Although your friend has an excellent understanding of property prices in her ow
 
 * List here your project hypothesis(es) and how you envision validating it (them).
 
-## The rationale to map the business requirements to the Data Visualisations and ML tasks
+## Rationale to map the business requirements to the Data Visualisations and ML tasks
 
-* List your business requirements and a rationale to map them to the Data Visualisations and ML tasks.
+### Business Requirement 1: Data visualisation of correlations
+1 - As a client I want to be able to visualise the house records data so that I am able to see which variables are important to the sale price of a house.
+2 - As as client I want to be able to show a heatmap of the correlation coefficients so that I can order the features by their importance to the sales price.
+3 - As a client I want to be able to plot the most important features and how much the variable is correlated with the sales price.
+
+### Business Requirement 2: Price Prediction model
+1 - As a client I want to be able to view and display the inherited houses records data so that I can find a house feature
+2 - As a client I want to use a custom ML model so that I can predict the sale price of my 4 inherited houses.
+3 - As a client I want to use that ML model so that I am able to also predict the sale price of any house in the same area.
 
 ## ML Business Case
 
