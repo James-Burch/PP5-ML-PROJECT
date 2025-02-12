@@ -92,6 +92,16 @@ Also, a capability to predict the sale price for the 4 inherited houses, as well
 
 * List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other items that your dashboard library supports.
 * Eventually, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project you were confident you would use a given plot to display an insight but eventually you needed to use another plot type)
+  
+  1. The home page has a summary of the project dataset and outlines the business requirements.
+  2. The second page will show my findings to fullfill the first business requirement. This page consists of the business requirement itself followed by:
+      * A tablular view of the dataset.
+      * A heatmap of the top correlated coefficients that influence sale price.
+      * Scatterplots of the correlated variables against the sale price to visualise the correlation.
+      * General conclusion of the findings
+  3. The third page will show the findings to fullfill the second business requirement. This page consists of a table to show the clients inherited house data, the predicted sales price of each respective property and the sum total of the sale prices. It also has an input with widgets which allow the user to change the input to predict the sale price for a property with those given values base on the new input.
+  4. The fourth page states the project hypothesis and how I validated it across the project. It shows the distribution of house sale price, a paragraph about the limitations of the model made to predict the sale price and how it is linked to the project hypothesis.
+  5. The fifth page has a general conclusions about the ML model performance at the start. Next the pipeline steps are then shown followed by a plot of the importance of each feature in the train set. Finally the R2 score of the ML model and displaying actual sale price against predicted sale price from the model.
 
 ## Unfixed Bugs
 
