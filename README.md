@@ -45,19 +45,48 @@ Although your friend has an excellent understanding of property prices in her ow
 
 ## Rationale to map the business requirements to the Data Visualisations and ML tasks
 
-### Business Requirement 1: Data visualisation of correlations
+### Business Requirement 1: Data Visualization and Correlation study
 1 - As a client I want to be able to visualise the house records data so that I am able to see which variables are important to the sale price of a house.
 2 - As as client I want to be able to show a heatmap of the correlation coefficients so that I can order the features by their importance to the sales price.
 3 - As a client I want to be able to plot the most important features and how much the variable is correlated with the sales price.
 
-### Business Requirement 2: Price Prediction model
-1 - As a client I want to be able to view and display the inherited houses records data so that I can find a house feature
+### Business Requirement 2: Classification, Regression and Data Analysis
+1 - As a client I want to be able to view and display the inherited houses records data so that I can find a house feature.
+
 2 - As a client I want to use a custom ML model so that I can predict the sale price of my 4 inherited houses.
+
 3 - As a client I want to use that ML model so that I am able to also predict the sale price of any house in the same area.
 
 ## ML Business Case
 
 * In the previous bullet, you potentially visualised an ML task to answer a business requirement. You should frame the business case using the method we covered in the course.
+
+1. What are the business requirements?
+* The client is interested in discovering how house attributes correlate with sale prices. Therefore, the client expects data visualizations of the correlated variables against the sale price.
+* The client is interested in predicting the house sale prices from her 4 inherited houses, and any other house in Ames, Iowa.
+2. Is there any business requirement that can be answered with conventional data analysis?
+* Yes, we can use conventional data analysis to investigate how house attributes are correlated with the sale prices.
+3. Does the client need a dashboard or an API endpoint?
+* The client needs a dashboard
+4. What does the client consider as a successful project outcome?
+* A study showing the most relevant variables correlated to sale price.
+Also, a capability to predict the sale price for the 4 inherited houses, as well as any other house in Ames, Iowa.
+5. Can you break down the project into Epics and User Stories?
+* Information gathering and data collection.
+* Data visualization, cleaning, and preparation.
+* Model training, optimization and validation.
+* Dashboard planning, designing, and development.
+* Dashboard deployment and release.
+6. Ethical or Privacy concerns?
+* No. The client found a public dataset.
+7. Does the data suggest a particular model?
+* The data suggests a regressor where the target is the sale price.
+8. What are the model's inputs and intended outputs?
+* The inputs are house attribute information and the output is the predicted sale price.
+9. What are the criteria for the performance goal of the predictions?
+* We agreed with the client an R2 score of at least 0.75 on the train set as well as on the test set.
+10. How will the client benefit?
+* The client will maximize the sales price for the inherited properties.
 
 ## Dashboard Design
 
