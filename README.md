@@ -46,11 +46,13 @@ Although your friend has an excellent understanding of property prices in her ow
 ## Rationale to map the business requirements to the Data Visualisations and ML tasks
 
 ### Business Requirement 1: Data Visualization and Correlation study
+
 1 - As a client I want to be able to visualise the house records data so that I am able to see which variables are important to the sale price of a house.
 2 - As as client I want to be able to show a heatmap of the correlation coefficients so that I can order the features by their importance to the sales price.
 3 - As a client I want to be able to plot the most important features and how much the variable is correlated with the sales price.
 
 ### Business Requirement 2: Classification, Regression and Data Analysis
+
 1 - As a client I want to be able to view and display the inherited houses records data so that I can find a house feature.
 
 2 - As a client I want to use a custom ML model so that I can predict the sale price of my 4 inherited houses.
@@ -58,8 +60,6 @@ Although your friend has an excellent understanding of property prices in her ow
 3 - As a client I want to use that ML model so that I am able to also predict the sale price of any house in the same area.
 
 ## ML Business Case
-
-* In the previous bullet, you potentially visualised an ML task to answer a business requirement. You should frame the business case using the method we covered in the course.
 
 1. What are the business requirements?
 * The client is interested in discovering how house attributes correlate with sale prices. Therefore, the client expects data visualizations of the correlated variables against the sale price.
@@ -90,9 +90,6 @@ Also, a capability to predict the sale price for the 4 inherited houses, as well
 
 ## Dashboard Design
 
-* List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other items that your dashboard library supports.
-* Eventually, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project you were confident you would use a given plot to display an insight but eventually you needed to use another plot type)
-  
   1. The home page has a summary of the project dataset and outlines the business requirements.
   2. The second page will show my findings to fullfill the first business requirement. This page consists of the business requirement itself followed by:
       * A tablular view of the dataset.
