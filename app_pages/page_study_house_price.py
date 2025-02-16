@@ -93,6 +93,7 @@ def page_study_house_price_body():
         st.write(f"* Plot Sale Price against attribute")
         scatterplot(df, dic, strongly_correlated, dtype_dict)
 
+# Create a function to display the heatmap from the HouseSalesPriceCorrelation notebook
 def heatmap(df):
     import numpy as np
     import matplotlib.pyplot as plt
@@ -106,3 +107,23 @@ def heatmap(df):
     sns.heatmap(data=df, annot=True, xticklabels=True, yticklabels=True, mask=mask, cmap='viridis', annot_kws={"size": annot_size}, ax=axes, linewidth=0.5)
     
     st.pyplot(fig)
+
+# Create a function to displau the scatterplots from the HouseSalesPriceCorrelation notebook
+def scatterplot(df, dic, strongly_correlated, dtype_dict):
+    for col in strongly_correlated:
+        if df[col].dtype == 'object':
+            df1 = df[df[col]!='None']
+            df2 = df1[df1[col].notnull()]
+            df3[col] = df2[col].replace(dic[col])
+        else:
+            df1 = df[df[col]!=0]
+            df3 = df1[df1[col].notnull()]
+        if dtype_dict[col] == 'object':
+            fig, axes = plt.subplots(figsize=(8, 5))
+            sns.stripplot(data=df3, x=col, y='SalePrice')
+            st.pyplot(fig)
+        elif dtype_dict[col] == 'numeric':
+            fig, axes = plt.subplots(figsize=(8, 5))
+            sns.regplot(data=df, x=col, y='SalePrice', scatter_kws={'alpha':0.5}, line_kws={"color":"red"})
+            sns.scatterplot(data=df3, x=col, y='SalePrice', alpha=0.5)
+            st.pyplot(fig)
