@@ -1,12 +1,8 @@
 import streamlit as st
-from src.data_management import load_house_price_data
-from src.data_management import load_corr
-from src.data_management import load_pkl_file
-
+from src.data_management import load_house_price_data, load_pkl_file, load_corr
 import matplotlib.pyplot as plt
 import seaborn as sns
 sns.set_style("whitegrid")
-
 import numpy as np
 
 def page_study_house_price_body():
