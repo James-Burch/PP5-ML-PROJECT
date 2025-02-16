@@ -91,4 +91,18 @@ def page_study_house_price_body():
         f"* We also see that the spread in price increases with price.  \n"
     )
         st.write(f"* Plot Sale Price against attribute")
-        scatterplot(df, dic, strongly_correlated, dtype_dict)      
+        scatterplot(df, dic, strongly_correlated, dtype_dict)
+
+def heatmap(df):
+    import numpy as np
+    import matplotlib.pyplot as plt
+    import seaborn as sns
+    fig, axes = plt.subplots(figsize=(12,5))
+    annot_size = 8
+
+    mask = np.zeros_like(df, dtype=np.bool_)
+    mask[abs(df) < 0.4] = True
+
+    sns.heatmap(data=df, annot=True, xticklabels=True, yticklabels=True, mask=mask, cmap='viridis', annot_kws={"size": annot_size}, ax=axes, linewidth=0.5)
+    
+    st.pyplot(fig)
