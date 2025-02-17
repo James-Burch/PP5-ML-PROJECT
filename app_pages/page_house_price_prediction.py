@@ -17,7 +17,7 @@ def page_house_price_prediction_body():
 	df = pd.read_csv("inputs/datasets/raw/house-price-20211124T154130Z-001/house-price/inherited_houses.csv")
 	
 	# predict prices of inherited houses with ML pipeline from PredictSalePrice notebook	
-	st.write("### House sale prices from client's inherited houses")
+	st.write("### 🏡 House sale prices from client's inherited houses")
 	st.write(
         f"* The table below shows the inherited houses data"
 	)

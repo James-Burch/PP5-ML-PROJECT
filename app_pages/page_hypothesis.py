@@ -6,7 +6,7 @@ def page_hypothesis_body():
 
     df = load_house_price_data()
 
-    st.write("## Project Hypothesis and Validation")
+    st.write("## 🏡 Project Hypothesis and Validation")
 
     # conclusions taken from HouseSalePrices notebook 
     st.success(

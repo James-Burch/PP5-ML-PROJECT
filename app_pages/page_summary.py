@@ -2,7 +2,7 @@ import streamlit as st
 
 def page_summary_body():
 
-    st.write("## Quick Project Summary")
+    st.write("## 🏡 Quick Project Summary")
 
     # information from README file - "Dataset Content" section
     st.info(
