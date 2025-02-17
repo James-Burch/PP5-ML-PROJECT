@@ -19,5 +19,74 @@ def page_house_price_prediction_body():
 	# predict prices of inherited houses with ML pipeline from PredictSalePrice notebook	
 	st.write("### House sale prices from client's inherited houses")
 	st.write(
-        f"* The table below shows the four inherited houses profile"
+        f"* The table below shows the inherited houses data"
 	)
+	st.write(df.head())
+	df = df.filter(best_features)
+	house_price_prediction = pipeline.predict(df).round(0)
+	df['Predicted House Sale Price'] = house_price_prediction
+	st.write(
+        f"* The table below shows the predicted sale prices for the four houses, together with the house features used in the prediction, "
+		"which are the two most important variables we saw in the House Price Study page: 'Overall Quality' and 'Above Ground Living "
+		"Area Square Feet'."
+	)
+	st.write(df.head())
+
+	# calculate sum of inherited houses predicted prices
+	house_price_total = df['Predicted House Sale Price'].sum()
+	st.write(
+        f"* The sum of the predicted sale prices for the four houses is: &nbsp; &nbsp; &nbsp;{house_price_total}  \n"
+	)
+
+	st.write("---")
+
+	# predict price of any other house in Ames, Iowa
+	st.write("### Predict house sale prices in Ames, Iowa  \n")
+	st.write("*Only the two house attributes 'Above Ground Living Area Sqft' and 'Overall Quality' "
+	"are needed for the ML model to predict the price.")
+	# create input fields for live data
+	X_live = DrawInputsWidgets()
+	# predict on live data
+	if st.button("Run Predictive Analysis"):
+		house_price_prediction = pipeline.predict(X_live.filter(best_features)).round(0)
+		st.write(
+			f"* The predicted sale price: &nbsp; &nbsp; &nbsp;{house_price_prediction[0]}  \n"
+		)
+
+def DrawInputsWidgets():
+
+	# load dataset
+	df = load_house_price_data()
+	percentageMin, percentageMax = 0.5, 1.0
+
+    # we create input widgets only for the two features we need	
+	col1, col2 = st.columns(2)
+
+	# We are using these features to feed the ML pipeline
+		
+ 	# create an empty DF which will keep the live data input
+	X_live = pd.DataFrame([], index=[0]) 
+	
+    # create the widgets for data input
+
+	with col1:
+		feature = 'GrLivArea'
+		st_widget = st.number_input(
+	 		label= feature,
+			min_value= df[feature].min()*percentageMin,
+			max_value= df[feature].max()*percentageMax,
+			value= df[feature].median()
+			)
+	X_live[feature] = st_widget
+
+	with col2:
+		feature = "OverallQual"
+		st_widget = st.selectbox(
+			label= feature,
+			options= df[feature].sort_values(ascending=False).unique()
+			)
+	X_live[feature] = st_widget
+
+    # return the predicted sale price calculated from the input widgets
+
+	return X_live        
