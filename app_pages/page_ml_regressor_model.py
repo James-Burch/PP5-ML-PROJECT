@@ -11,7 +11,8 @@ def page_ml_regressor_model_body():
 
     # Define model version
     version = 'v1'
-    best_gb_model = load_pkl_file(f"outputs/predict_price/{version}/best_gb_model.pkl")
+    best_pipeline = load_pkl_file(f"outputs/predict_price/{version}/best_pipeline.pkl")
+
 
     # Load train and test datasets
     X_train = pd.read_csv(f"outputs/predict_price/{version}/X_train.csv")
@@ -31,7 +32,7 @@ def page_ml_regressor_model_body():
 
     # Display ML Pipeline
     st.subheader("📌 ML Pipeline")
-    st.write(best_gb_model)
+    st.write(best_pipeline)
     st.write("---")
 
     df = pd.read_csv("outputs/datasets/collection/housing_data_cleaned.csv")
@@ -39,7 +40,7 @@ def page_ml_regressor_model_body():
 
     # Feature Importance Plot
     st.subheader("🔍 Feature Importance")
-    feature_importance = best_gb_model.feature_importances_
+    feature_importance = best_pipeline.feature_importances_
     importance_df = pd.DataFrame({'Feature': feature_names, 'Importance': feature_importance}).sort_values(by='Importance', ascending=False)
 
     st.write(X_train.columns.to_list())
@@ -51,8 +52,8 @@ def page_ml_regressor_model_body():
     st.pyplot(fig)
 
 # Predictions
-    y_train_pred = best_gb_model.predict(X_train)
-    y_test_pred = best_gb_model.predict(X_test)
+    y_train_pred = best_pipeline.predict(X_train)
+    y_test_pred = pipeline.predict(X_test)
 
     # Scatterplots: Predicted vs Actual
     st.subheader("Predicted vs. Actual Sale Price Scatter Plots")
