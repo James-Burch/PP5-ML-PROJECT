@@ -41,7 +41,8 @@ Although your friend has an excellent understanding of property prices in her ow
 
 ## Hypothesis and how to validate?
 
-* List here your project hypothesis(es) and how you envision validating it (them).
+* Suspect the sales price distribution is skewed to the right (upper quantile) which may lead to outliers causing problems when it comes to predicting the sales price of the 4 inherited properties.
+* To be able to validate this project hypothesis about the distribution we will plot a combined histogram/boxplot of the sales price data.
 
 ## Rationale to map the business requirements to the Data Visualisations and ML tasks
 
