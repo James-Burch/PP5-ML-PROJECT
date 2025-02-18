@@ -49,7 +49,9 @@ Although your friend has an excellent understanding of property prices in her ow
 ### Business Requirement 1: Data Visualization and Correlation study
 
 1 - As a client I want to be able to visualise the house records data so that I am able to see which variables are important to the sale price of a house.
+
 2 - As as client I want to be able to show a heatmap of the correlation coefficients so that I can order the features by their importance to the sales price.
+
 3 - As a client I want to be able to plot the most important features and how much the variable is correlated with the sales price.
 
 ### Business Requirement 2: Classification, Regression and Data Analysis
@@ -103,7 +105,7 @@ Also, a capability to predict the sale price for the 4 inherited houses, as well
 
 ## Unfixed Bugs
 
-* You will need to mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a big variable to consider, paucity of time and difficulty understanding implementation is not valid reason to leave bugs unfixed.
+* There are currenlty no unfixed bugs
 
 ## Deployment
 
@@ -122,7 +124,18 @@ Also, a capability to predict the sale price for the 4 inherited houses, as well
 
 ## Main Data Analysis and Machine Learning Libraries
 
-* Here you should list the libraries you used in the project and provide example(s) of how you used these libraries.
+* numpy==1.26.1
+* pandas==2.1.1
+* matplotlib==3.8.0
+* seaborn==0.13.2
+* plotly==5.17.0
+* streamlit==1.40.2
+* feature-engine==1.6.1
+* imbalanced-learn==0.11.0
+* scikit-learn==1.3.1
+* xgboost==1.7.6
+
+I have used seaborn for the heatmap plot for the correlated features. Pandas profiling to explore the dataset and remove 2 features due to 90% missing data. I have used matplotlib to plot scatterplots to show the predicted price vs actual price.
 
 ## Credits
 
