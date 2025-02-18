@@ -72,7 +72,7 @@ def page_study_house_price_body():
     )
 
     # Heatmap of correlation coefficients above 0.4
-    if st.checkbox("Heatmap of the 14 variables in order of importance. We see that the two most important variables"
+    if st.checkbox("Heatmap of the 13 variables in order of importance. We see that the two most important variables"
     " are 'Overall Quality' and 'Above Ground Living Area Square Feet'."):
         heatmap(df_corr)
         
