@@ -50,7 +50,35 @@ def page_ml_regressor_model_body():
     ax.set_ylabel("Feature")
     st.pyplot(fig)
 
+# Predictions
+    y_train_pred = best_gb_model.predict(X_train)
+    y_test_pred = best_gb_model.predict(X_test)
 
+    # Scatterplots: Predicted vs Actual
+    st.subheader("Predicted vs. Actual Sale Price Scatter Plots")
+    st.info("* For the predictions on houses worth less than £400,000 they follow the black dashed line meaning the predicted follows the actual price.  \n")
+    st.warning("* Our model may not be able to predict prices accurately when a house price is higher than £400,000.  \n")
 
+    def plot_predicted_vs_actual(y_actual, y_pred, title):
+        fig, ax = plt.subplots(figsize=(8, 6))
+        sns.scatterplot(x=y_actual, y=y_pred, alpha=0.5, ax=ax)
+        ax.plot([y_actual.min(), y_actual.max()], [y_actual.min(), y_actual.max()], '--', color='black')  # Perfect Prediction
+        ax.set_xlabel("Actual Sale Price")
+        ax.set_ylabel("Predicted Sale Price")
+        ax.set_title(title)
+        return fig
 
+    col1, col2 = st.columns(2)
 
+    with col1:
+        st.write("**Train Set**")
+        st.pyplot(plot_predicted_vs_actual(y_train, y_train_pred, "Train Set: Predicted vs Actual Sale Price"))
+
+    with col2:
+        st.write("**Test Set**")
+        st.pyplot(plot_predicted_vs_actual(y_test, y_test_pred, "Test Set: Predicted vs Actual Sale Price"))
+
+    st.write(
+        "These plots compare the predicted vs actual sale prices. "
+        "The **black dashed line** represents perfect predictions."
+    )
