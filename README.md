@@ -41,8 +41,13 @@ Although your friend has an excellent understanding of property prices in her ow
 
 ## Hypothesis and how to validate?
 
-* Suspect the sales price distribution is skewed to the right (upper quantile) which may lead to outliers causing problems when it comes to predicting the sales price of the 4 inherited properties.
+1. Suspect the sales price distribution is skewed to the right (upper quantile) which may lead to outliers causing problems when it comes to predicting the sales price of the 4 inherited properties.
+
 * To be able to validate this project hypothesis about the distribution we will plot a combined histogram/boxplot of the sales price data.
+
+2. Suspect that although the prediction model takes 3 features to predict the price 'TotalBsmtSF' does not make a massive differnce to sale price 'OverallQual' and 'GrLivArea' have more importance to predict the price.
+
+* To be able to validate this project hypothesis about the importance of specific features to the predicted sales price we will plot a feature importance plot on the ML regressor model page to show that 'TotalBsmtSF' is least important.
 
 ## Rationale to map the business requirements to the Data Visualisations and ML tasks
 

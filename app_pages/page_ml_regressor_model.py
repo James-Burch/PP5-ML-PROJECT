@@ -52,6 +52,11 @@ def page_ml_regressor_model_body():
     ax.set_ylabel("Feature")
     st.pyplot(fig)
 
+    st.subheader("Table to show the correlation of each value with each other")
+    st.write(df[['SalePrice', 'OverallQual', 'GrLivArea', 'TotalBsmtSF']].corr())
+    st.warning("* We can see that 'TotalBsmtSF' has the lowest correlation with sale price and the rest of the features.")
+    st.warning("* Ignore the correlation value '1' as they cannot have a correlation with the same feature")
+
     # Predictions
     y_train_pred = best_pipeline.predict(X_train)
     y_test_pred = best_pipeline.predict(X_test)
