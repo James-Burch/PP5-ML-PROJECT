@@ -25,7 +25,8 @@ def page_ml_regressor_model_body():
     # Summary of model performance
     st.info(
         f"* The target R² score agreed with the client is **0.75+** on both train and test sets.  \n"
-        f"* Our model achieves R² score of **0.84** on the test set ✅"
+        f"* Our model achieves R² score of **0.87** on the train set ✅. \n"
+        f"* Our model also achieves an R² score of **0.77** on the test set ✅"
     )
     st.write("---")
 
