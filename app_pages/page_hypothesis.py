@@ -26,3 +26,12 @@ def page_hypothesis_body():
         f"* This could be connected to the outliers mentioned above (with sale prices above £466,075), "
         f"we took some steps to improve the model for predicting higher prices, the sale price variable was transformed to make the distribution more symmetrical but more work will be needed.  \n"
     )
+
+    st.success(
+        f"* Suspect that although the prediction model takes 3 features to predict the price 'TotalBsmtSF'"
+        "does not make a massive differnce to sale price 'OverallQual' and 'GrLivArea' have more importance to predict the price.  \n"
+    )
+
+    st.info(
+        f"* Please see 'ML Regressor Model' page for the conclusion and evidence backing up this hypothesis."
+    )
