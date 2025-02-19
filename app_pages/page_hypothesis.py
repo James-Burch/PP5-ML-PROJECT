@@ -8,6 +8,8 @@ def page_hypothesis_body():
 
     st.write("## 🏡 Project Hypothesis and Validation")
 
+    st.write("### Hypothesis 1")
+
     # conclusions taken from HouseSalePrices notebook 
     st.success(
         f"* Suspect that there is few high sales prices in the dataset.  \n"
@@ -26,6 +28,8 @@ def page_hypothesis_body():
         f"* This could be connected to the outliers mentioned above (with sale prices above £466,075), "
         f"we took some steps to improve the model for predicting higher prices, the sale price variable was transformed to make the distribution more symmetrical but more work will be needed.  \n"
     )
+
+    st.write("### Hypothesis 2")
 
     st.success(
         f"* Suspect that although the prediction model takes 3 features to predict the price 'TotalBsmtSF'"
