@@ -41,7 +41,7 @@ Although your friend has an excellent understanding of property prices in her ow
 
 ## Hypothesis and how to validate?
 
-1. Suspect the sales price distribution is skewed to the right (upper quantile) which may lead to outliers causing problems when it comes to predicting the sales price of the 4 inherited properties.
+1. Suspect that the sale price distribution is skewed to the right (upper quantile), which may lead to outliers and cause issues when predicting the sale price of the four inherited properties.
 
 * To be able to validate this project hypothesis about the distribution we will plot a combined histogram/boxplot of the sales price data.
 
@@ -110,13 +110,13 @@ Also, a capability to predict the sale price for the 4 inherited houses, as well
 
 ## Unfixed Bugs
 
-* There are currenlty no unfixed bugs
+* There are currently no unfixed bugs
 
 ## Deployment
 
 ### Heroku
 
-* The App live link is: <https://YOUR_APP_NAME.herokuapp.com/>
+* The App live link is: <https://house-price-prediction-pp5-615997f77e23.herokuapp.com/>
 * Set the .python-version Python version to a [Heroku-24](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
 * The project was deployed to Heroku using the following steps.
 
@@ -140,26 +140,20 @@ Also, a capability to predict the sale price for the 4 inherited houses, as well
 * scikit-learn==1.3.1
 * xgboost==1.7.6
 
-I have used seaborn for the heatmap plot for the correlated features. Pandas profiling to explore the dataset and remove 2 features due to 90% missing data. I have used matplotlib to plot scatterplots to show the predicted price vs actual price.
+* I used Seaborn to create the heatmap for correlated features and Pandas Profiling to explore the dataset, removing two features due to 90% missing data. 
+
+* I used Matplotlib to create scatterplots comparing predicted and actual prices.
 
 ## Credits
 
-* I have used 
-* You can break the credits section up into Content and Media, depending on what you have included in your project.
+* I have used the Code Insitute Template for this project which gave me all the majority of the file structure needed and the readme template to start with.
+* I also referred to multiple Code Institute lessons, including the scikit-learn modules and followed the Churnometer walkthrough to improve my understanding.
+* I also used youtube videos by 'codebasics' to view other ways of writing the code when I got stuck, I did not use any code copied from these videos but they inspired me to write my own a different way.
+* Thanks to my mentor for guiding me in the right direction and to the support channel on Slack for helping me identify the issue causing my error.
+* Thanks to my fellow students for sharing their knowledge, time and assisting me when I encountered errors or was unsure how to proceed.
 
 ### Content
 
-* The text for the Home page was taken from Wikipedia Article A
-* Instructions on how to implement form validation on the Sign-Up page was taken from [Specific YouTube Tutorial](https://www.youtube.com/)
-* The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
-
-### Media
-
-* The photos used on the home and sign-up page are from This Open Source site
-* The images used for the gallery page were taken from this other open-source site
-
-## Acknowledgements (optional)
-
-
-* In case you would like to thank the people that provided support through this project.
+* I wrote the text for the streamlit dashboard, drawing heavy inspiration from the Churnometer project, as it was the most recent piece of content I worked on. 
+* I have used some emoji icons on the streamlit dashboard as I have a MacBook I can implement these via my keyboard
 
